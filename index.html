@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeeSmart Tutoring</title>
+    <style>
+        /* Nord Color Scheme */
+        :root {
+            --nord0: #2E3440;  /* Dark gray */
+            --nord1: #3B4252;  /* Darker gray */
+            --nord4: #D8DEE9;  /* Light gray */
+            --nord6: #ECEFF4;  /* White-ish */
+            --nord11: #BF616A; /* Red */
+            --nord13: #EBCB8B; /* Yellow */
+            --nord15: #B48EAD; /* Purple */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: var(--nord0);  /* Changed to dark background */
+            color: var(--nord4);       /* Light text for contrast */
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: var(--nord1);
+            color: var(--nord6);
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .bee-graphic {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 10px;
+        }
+
+        .bee-left { left: 10px; }
+        .bee-right { right: 10px; }
+
+        h1 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--nord1);
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--nord6);  /* Changed to brighter white for contrast */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--nord13);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .section {
+            background: var(--nord1);  /* Darker section background */
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .section h2 {
+            color: var(--nord6);  /* Bright white for headings */
+            margin-bottom: 1rem;
+        }
+
+        .subjects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .subject-card {
+            background: var(--nord0);  /* Even darker card background */
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+            color: var(--nord4);      /* Light text */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--nord13);
+            color: var(--nord0);
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background: var(--nord15);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--nord1);
+            color: var(--nord6);
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+        }
+
+/* Replace the existing tutor-related CSS with this */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 200px;
+}
+
+.tutor-image {
+    flex: 0 0 auto;
+}
+
+.tutor-img {
+    width: 300px;              /* Changed max-width to width for consistent circle */
+    height: 300px;             /* Equal height and width for perfect circle */
+    border-radius: 50%;        /* Makes it circular */
+    border: 2px solid var(--nord13); /* Yellow border for bee theme */
+    object-fit: cover;         /* Ensures image fills circle without distortion */
+}
+
+/* Add this to the existing CSS */
+.contact-content {
+    margin-top: 1.5rem;
+}
+
+.contact-content p {
+    font-size: 2rem;          /* Large text */
+    margin-bottom: 1rem;
+    font-weight: bold;        /* Makes it stand out */
+}
+
+.contact-content a {
+    color: var(--nord13);     /* Yellow links for bee theme */
+    text-decoration: none;
+}
+
+.contact-content a:hover {
+    color: var(--nord15);     /* Purple on hover */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .contact-content p {
+        font-size: 1.5rem;    /* Slightly smaller but still readable */
+    }
+}
+
+/* Update footer styling */
+footer {
+    background: var(--nord1);
+    color: var(--nord6);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    font-size: 1rem;          /* Keep footer text smaller */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .tutor-img {
+        margin: 1rem auto;
+    }
+}
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.2rem; }
+            nav ul { flex-direction: column; align-items: center; }
+            .bee-graphic { width: 30px; height: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rodriguez Resources Tutoring</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#subjects">Subjects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="section" id="home">
+            <h2>Welcome to Rodriguez Resources tutoring services!</h2>
+            <p>We're so excited to help you learn! Our expert tutors in math and science are here to make education fun and effective.</p>
+        </section>
+
+        <section class="section" id="subjects">
+            <h2>Our Subjects</h2>
+            <div class="subjects">
+                <div class="subject-card">
+                    <h3>Math</h3>
+                    <p>Algebra, Trigonometry, Geometry, and Pre-Calculus</p>
+                </div>
+                <div class="subject-card">
+                    <h3>Chemistry</h3>
+                    <p>General, Organic, and  Biohemistry </p>
+                </div>
+                <div class="subject-card">
+                    <h3>Biology</h3>
+                    <p>Introductory, Micro, and Evolutionary Biology</p>
+                </div>
+            </div>
+            <a href="#contact" class="btn">Book a Session</a>
+        </section>
+
+        <section class="section" id="about">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Expert Tutor: Shianna Rodriguez</h3>
+                    <p>Shianna earned her Bachelor's of Science degree in Plant Sciences and Master's degree in Insect Sciences at the University of Arizona.</p>
+                    <p>With combined experience as a professional tutor and scientist, Shianna is well equipped to help you reach your educational goals!</p>
+                </div>
+                <div class="tutor-image">
+                    <img src="shi.jpg" alt="Our Star Tutor" class="tutor-img">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Replace the existing footer and add this before it -->
+<div class="container">
+    <!-- ... previous sections remain unchanged ... -->
+
+    <section class="section" id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-content">
+            <p>Email: <a href="mailto:Rodriguez.Resources25@gmail.com">Rodriguez.Resources25@gmail.com</a></p>
+            <p>Phone: <a href="tel:+7209277137">(720) 927-7137</a></p>
+        </div>
+    </section>
+</div>
+
+
+    <footer>
+        <p>Contact us: Rodriguez.Resources25@gmail.com | (720) 927-7137</p>
+    </footer>
+</body>
+</html>
