@@ -214,6 +214,45 @@ footer {
             nav ul { flex-direction: column; align-items: center; }
             .bee-graphic { width: 30px; height: 30px; }
         }
+        
+        
+        /* Add this to the existing CSS */
+.subject-card ul {
+    list-style-type: none;      /* Remove default bullets */
+    padding-left: 0;            /* Align with card content */
+    margin-top: 0.5rem;         /* Space between title and list */
+}
+
+.subject-card li {
+    position: relative;         /* For custom bullet positioning */
+    padding-left: 1.5rem;       /* Space for custom bullet */
+    margin-bottom: 0.5rem;      /* Space between items */
+    color: var(--nord4);        /* Light gray text */
+}
+
+.subject-card li:before {
+    content: "🐝";             /* Bee emoji as bullet point */
+    position: absolute;
+    left: 0;
+    color: var(--nord13);      /* Yellow bee */
+    font-size: 0.8rem;         /* Smaller bee size */
+}
+
+/* Ensure cards maintain layout */
+.subject-card {
+    background: var(--nord0);
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: left;           /* Changed from center for better list alignment */
+    color: var(--nord4);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .subject-card {
+        text-align: left;       /* Keep left-aligned on mobile */
+    }
+}
     </style>
 </head>
 <body>
@@ -241,15 +280,28 @@ footer {
             <div class="subjects">
                 <div class="subject-card">
                     <h3>Math</h3>
-                    <p>Algebra, Trigonometry, Geometry, and Pre-Calculus</p>
+                    <ul>
+                        <li>Algebra</li>
+                        <li>Trigonometry</li>
+                        <li>Geometry</li>
+                        <li>Precalculus</li>
+                    </ul>
                 </div>
                 <div class="subject-card">
                     <h3>Chemistry</h3>
-                    <p>General, Organic, and  Biohemistry </p>
+                    <ul>
+                        <li>General Chemistry</li>
+                        <li>Organic Chemistry</li>
+                        <li>Biochemistry</li>
+                    </ul>
                 </div>
                 <div class="subject-card">
                     <h3>Biology</h3>
-                    <p>Introductory, Micro, and Evolutionary Biology</p>
+                    <ul>
+                        <li>Introductory Biology</li>
+                        <li>Microbiology</li>
+                        <li>Evolutionary Biology</li>
+                    </ul>
                 </div>
             </div>
             <a href="#contact" class="btn">Book a Session</a>
@@ -260,7 +312,7 @@ footer {
             <div class="about-content">
                 <div class="about-text">
                     <h3>Expert Tutor: Shianna Rodriguez</h3>
-                    <p>Shianna earned her Bachelor's of Science degree in Plant Sciences and Master's degree in Insect Sciences at the University of Arizona.</p>
+                    <p>Shianna earned her Bachelor's of Science degree in Plant Sciences and Master's of Science degree in Insect Sciences at the University of Arizona.</p>
                     <p>With combined experience as a professional tutor and scientist, Shianna is well equipped to help you reach your educational goals!</p>
                 </div>
                 <div class="tutor-image">
