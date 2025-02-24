@@ -143,7 +143,7 @@
 .about-content {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 
@@ -157,17 +157,19 @@
 }
 
 .tutor-img {
-    width: 300px;              /* Changed max-width to width for consistent circle */
-    height: 300px;             /* Equal height and width for perfect circle */
+    width: 250px;              /* Changed max-width to width for consistent circle */
+    height: 250px;             /* Equal height and width for perfect circle */
     border-radius: 50%;        /* Makes it circular */
     border: 2px solid var(--nord13); /* Yellow border for bee theme */
     object-fit: cover;         /* Ensures image fills circle without distortion */
 }
 
-/* Add this to the existing CSS */
 .contact-content {
-    margin-top: 1.5rem;
+    margin-top: -1rem; /* Reduced margin */
 }
+
+/* Add this to the existing CSS */
+
 
 .contact-content p {
     font-size: 2rem;          /* Large text */
@@ -186,7 +188,7 @@
 
 @media (max-width: 768px) {
     .contact-content p {
-        font-size: 1.2rem;    /* Smaller, more balanced size for mobile */
+        font-size: 1.0rem;    /* Smaller, more balanced size for mobile */
     }
 }
 /* Adjust for smaller screens */
@@ -327,11 +329,9 @@ footer {
             </div>
         </section>
     </div>
-
     <!-- Replace the existing footer and add this before it -->
 <div class="container">
     <!-- ... previous sections remain unchanged ... -->
-
     <section class="section" id="contact">
         <h2>Contact Us</h2>
         <div class="contact-content">
